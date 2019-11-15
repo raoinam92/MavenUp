@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.mavenup.com/$1 [R=301,L] 
+RewriteCond %{http_host} ^mavenup.com [NC]
+RewriteRule ^(.*)$ https://www.mavenup.com/$1 [R=301,L] 
+RewriteRule ^ index.php [L]
+RewriteCond %robots.txt -f [NC]
+RewriteRule ^ index.php [L]
